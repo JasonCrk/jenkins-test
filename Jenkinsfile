@@ -1,12 +1,12 @@
 pipeline {
     agent {
-        docker { image 'openjdk:17-jdk-alpine' }
+        docker { image 'node:16-alpine' }
     }
 
     stages {
         stage('Build') {
             steps {
-                sh 'java --version'
+                sh 'node --version'
             }
         }
     }
